@@ -10,24 +10,35 @@
   <script type="text/x-handlebars" data-template-name="index">
     <p>Ember.Select</p>
 
-      {{view Ember.Select
-       content=items
-       optionValuePath="content.id"
-       optionLabelPath="content.name"
-       value=currentItem.id}}
+    {{view Ember.Select
+     content=items
+     optionValuePath="content.id"
+     optionLabelPath="content.name"
+     value=currentItem.id}}
 
-       <p><strong>Ember Select Dropdown</strong></p>
-     {{select-dropdown
-       class="select-dropdown"
-       labelPlaceholder="Select Item"
-       label="content.name"
-       content=items
-       optionValuePath="content.id"
-       optionLabelPath="content.name"
-       value=currentItem.id
-       selection=currentItem}}
+     <p><strong>Ember Select Dropdown</strong></p>
 
-       Selected: {{currentItem.name}}
+   {{select-dropdown
+     class="select-dropdown"
+     labelPlaceholder="Select Item"
+     label="content.name"
+     content=items
+     optionValuePath="content.id"
+     optionLabelPath="content.name"
+     value=currentItem.id
+     selection=currentItem}}
+
+   {{select-dropdown
+     class="select-dropdown"
+     labelPlaceholder="Select Item"
+     label="content.name"
+     content=items
+     optionValuePath="content.id"
+     optionLabelPath="content.name"
+     value=currentItem.id
+     selection=currentItem}}
+
+     Selected: {{currentItem.name}}
   </script>
 
   <script type="text/x-handlebars" id="components/select-dropdown">

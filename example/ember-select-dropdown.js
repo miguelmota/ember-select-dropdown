@@ -23,7 +23,7 @@ App.SelectDropdownComponent = Ember.Component.extend({
       return o[this.get(prop).replace(/content\./, '')];
     }
 
-    return Ember.$.map(this.get('content'), function(o, i) {
+    return this.get('content').map(function(o, i) {
       if (this.get('optionLabelPath')) {
         o.label = getProp.call(this, o, 'optionLabelPath');
       }
