@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Ember Select Dropdown</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script type="text/x-handlebars" data-template-name="index">
+    <p>Ember Select</p>
+
+      {{view Ember.Select
+       content=items
+       optionValuePath="content.id"
+       optionLabelPath="content.name"
+       value=currentItem.id}}
+
+    <p>Ember Select Dropdown</p>
+     {{select-dropdown
+       class="select-dropdown"
+       label="Select Item"
+       content=items
+       optionValuePath="content.id"
+       optionLabelPath="content.name"
+       value=currentItem.id}}
+
+       Selected: {{currentItem.id}}
+  </script>
+
+  <script type="text/x-handlebars" id="components/select-dropdown">
+    <div {{bind-attr class=class}}>
+    <div><label {{action "open"}}>
+      {{label}}
+      </label></div>
+      {{#if opened}}
+        <nav>
+        {{#if items}}
+          <ul>
+            {{#each items}}
+            <li {{bind-attr class="isSelected:selected"}} {{action "select" this}}>
+              {{label}}
+            </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        </nav>
+      {{/if}}
+    </div>
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/ember/ember.js"></script>
+  <script src="main.js"></script>
+  <script src="ember-select-dropdown.js"></script>
+</body>
+</html>
+

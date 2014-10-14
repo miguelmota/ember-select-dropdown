@@ -1,0 +1,36 @@
+.select-dropdown {
+  max-width: 200px;
+  margin: 0 0 20px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 100%;
+}
+
+ul li:hover {
+  cursor: pointer;
+  border-color: #555;
+}
+
+label {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+label:hover {
+  cursor: pointer;
+  border-color: #555;
+}
+
+.selected {
+  border-color: #ff0000;
+}
