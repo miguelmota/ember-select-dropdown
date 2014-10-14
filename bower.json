@@ -1,7 +1,8 @@
 {
   "name": "ember-select-dropdown",
-  "version": "0.0.0",
-  "homepage": "https://github.com/miguelmota/jquery-input-dropdown",
+  "version": "0.0.1",
+  "homepage": "https://github.com/miguelmota/ember-select-dropdown",
+  "main": "ember-select-dropdown.js",
   "authors": [
     "Miguel Mota <miguelmota2@gmail.com>"
   ],
