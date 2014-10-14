@@ -8,7 +8,7 @@
 </head>
 <body>
   <script type="text/x-handlebars" data-template-name="index">
-    <p>Ember Select</p>
+    <p>Ember.Select</p>
 
       {{view Ember.Select
        content=items
@@ -16,22 +16,28 @@
        optionLabelPath="content.name"
        value=currentItem.id}}
 
-    <p>Ember Select Dropdown</p>
+       <p><strong>Ember Select Dropdown</strong></p>
      {{select-dropdown
        class="select-dropdown"
-       label="Select Item"
+       labelPlaceholder="Select Item"
+       label="content.name"
        content=items
        optionValuePath="content.id"
        optionLabelPath="content.name"
-       value=currentItem.id}}
+       value=currentItem.id
+       selection=currentItem}}
 
-       Selected: {{currentItem.id}}
+       Selected: {{currentItem.name}}
   </script>
 
   <script type="text/x-handlebars" id="components/select-dropdown">
     <div {{bind-attr class=class}}>
     <div><label {{action "open"}}>
-      {{label}}
+      {{#if showPlaceholder}}
+        {{labelPlaceholder}}
+      {{else}}
+        {{label}}
+      {{/if}}
       </label></div>
       {{#if opened}}
         <nav>

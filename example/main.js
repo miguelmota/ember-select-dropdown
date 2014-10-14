@@ -9,7 +9,7 @@ App.IndexController = Ember.ObjectController.extend({
     {name: 'Tacos', id: 1},
     {name: 'Burritos', id: 2}
   ],
-  currentItem: {
-    id: 2
-  }
+  currentItem: function() {
+    return this.get('items')[1];
+  }.property()
 });
