@@ -1,6 +1,6 @@
 {
   "name": "ember-select-dropdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/miguelmota/ember-select-dropdown",
   "main": "ember-select-dropdown.js",
   "authors": [

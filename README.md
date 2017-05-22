@@ -1,8 +1,8 @@
 # Ember Select Dropdown
 
-#Demo
+# Demo
 
-**[http://lab.moogs.io/ember-select-dropdown](http://lab.moogs.io/ember-select-dropdown)**
+**[https://lab.miguelmota.com/ember-select-dropdown](https://lab.miguelmota.com/ember-select-dropdown)**
 
 # Usage
 
